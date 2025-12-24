@@ -1,22 +1,13 @@
-# Файл color.converter.py
-# Автор: Сергеев Дмитрий Владимирович
-# Этот файл является частью проетка 'hello-engineer'
-# Вариант 7: Конвертер RGB в HEX
+uthor = "Сайлиев Азамат ИТ12"
 
-def rgb_to_hex(r, g, b):
-    return f"#{r:02X}{g:02X}{b:02X}"
+rubles = 10000      # сумма в рублях
+usd_rate = 92.5     # курс доллара
 
-def run_converter():
-    print("=== Конвертер RGB в HEX ===")
-    r = int(input("Введите значение R (0-255): "))
-    g = int(input("Введите значение G (0-255): "))
-    b = int(input("Введите значение B (0-255): "))
-        
-    if not (0 <= r <= 255 and 0 <= g <= 255 and 0 <= b <= 255):
-            print("Ошибка: значения должны быть в диапазоне 0–255.")
-            return
-        
-    hex_color = rgb_to_hex(r, g, b)
-    print(f"\nRGB({r}, {g}, {b}) → HEX {hex_color}")
+usd_amount = rubles / usd_rate
 
-run_converter()
+print("Конвертер валют")
+print("-" * 25)
+print(f"Автор: {author}")
+print(f"Сумма в рублях: {rubles} RUB")
+print(f"Курс доллара: {usd_rate} RUB/USD")
+print(f"Сумма в долларах: {usd_amount:.2f} USD")
